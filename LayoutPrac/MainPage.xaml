@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LayoutPrac.MainPage">
+
+    <Grid Margin="10" BackgroundColor="Wheat">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="60*" />
+            <ColumnDefinition Width="20*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="Row1"
+               Grid.Column="0"
+               Grid.Row="0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        
+        <Label Text="Row2"
+               Grid.Column="0"
+               Grid.Row="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+
+        <Button Text="U"
+                Clicked="Up_Clicked"
+                Grid.Column="1"
+                Grid.Row="0"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+
+        <Button Text="L"
+                Clicked="Left_Clicked"
+                Grid.Column="0"
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+
+        <Button Text="R"
+                Clicked="Right_Clicked"
+                Grid.Column="2"
+                Grid.Row="2"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+
+        <Button Text="D"
+                Clicked="Down_Clicked"
+                Grid.Column="1"
+                Grid.Row="4"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+
+        <Label Text="Row1"
+               Grid.Column="2"
+               Grid.Row="0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <Label Text="Row2"
+               Grid.Column="2"
+               Grid.Row="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" />
+
+        <AbsoluteLayout BackgroundColor="White" 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Grid.RowSpan="3">
+            <Ellipse x:Name="circle" Fill="Blue" WidthRequest="50" HeightRequest="50" AbsoluteLayout.LayoutFlags="PositionProportional" 
+                   AbsoluteLayout.LayoutBounds="0.5,0.5"/>
+        </AbsoluteLayout>
+
+        <Label Text="Row2"
+               Grid.Column="0"
+               Grid.Row="3"
+               HorizontalOptions="Center"
+               VerticalOptions="End" />
+
+        <Label Text="Row3"
+               Grid.Column="0"
+               Grid.Row="4"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <Label Text="Row2"
+               Grid.Column="2"
+               Grid.Row="3"
+               HorizontalOptions="Center"
+               VerticalOptions="End" />
+
+        <Label Text="Row3"
+               Grid.Column="2"
+               Grid.Row="4"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+
+    </Grid>
+
+</ContentPage>
