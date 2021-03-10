@@ -31,6 +31,7 @@
                VerticalOptions="Start" />
 
         <Button Text="U"
+                x:Name="up"
                 Clicked="Up_Clicked"
                 Grid.Column="1"
                 Grid.Row="0"
@@ -38,6 +39,7 @@
                 VerticalOptions="Center" />
 
         <Button Text="L"
+                x:Name="left"
                 Clicked="Left_Clicked"
                 Grid.Column="0"
                 Grid.Row="2"
@@ -45,6 +47,7 @@
                 VerticalOptions="Center" />
 
         <Button Text="R"
+                x:Name="right"
                 Clicked="Right_Clicked"
                 Grid.Column="2"
                 Grid.Row="2"
@@ -52,6 +55,7 @@
                 VerticalOptions="Center" />
 
         <Button Text="D"
+                x:Name="down"
                 Clicked="Down_Clicked"
                 Grid.Column="1"
                 Grid.Row="4"

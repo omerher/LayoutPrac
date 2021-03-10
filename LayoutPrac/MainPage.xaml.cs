@@ -22,6 +22,17 @@ namespace LayoutPrac
             Rectangle c = AbsoluteLayout.GetLayoutBounds(circle);
             double x = c.X;
             double y = c.Y - margin;
+
+            if (y < 0)
+            {
+                y = 0;
+                up.IsEnabled = false;
+            }
+            else
+            {
+                down.IsEnabled = true;
+            }
+
             AbsoluteLayout.SetLayoutBounds(circle, new Rectangle(x, y, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
         }
 
@@ -30,6 +41,17 @@ namespace LayoutPrac
             Rectangle c = AbsoluteLayout.GetLayoutBounds(circle);
             double x = c.X;
             double y = c.Y + margin;
+
+            if (y > 1)
+            {
+                down.IsEnabled = false;
+                y = 1;
+            }
+            else
+            {
+                up.IsEnabled = true;
+            }
+
             AbsoluteLayout.SetLayoutBounds(circle, new Rectangle(x, y, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
         }
 
@@ -38,6 +60,17 @@ namespace LayoutPrac
             Rectangle c = AbsoluteLayout.GetLayoutBounds(circle);
             double x = c.X - margin;
             double y = c.Y;
+
+            if (x < 0)
+            {
+                left.IsEnabled = false;
+                x = 0;
+            }
+            else
+            {
+                right.IsEnabled = true;
+            }
+
             AbsoluteLayout.SetLayoutBounds(circle, new Rectangle(x, y, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
         }
 
@@ -46,6 +79,17 @@ namespace LayoutPrac
             Rectangle c = AbsoluteLayout.GetLayoutBounds(circle);
             double x = c.X + margin;
             double y = c.Y;
+
+            if (x > 1)
+            {
+                x = 1;
+                right.IsEnabled = false;
+            }
+            else
+            {
+                left.IsEnabled = true;
+            }
+
             AbsoluteLayout.SetLayoutBounds(circle, new Rectangle(x, y, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
         }
     }
